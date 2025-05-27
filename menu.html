@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coffee Shop</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #490606;
+      color: #338393;
+    }
+    .logo-top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      border-radius:50%;
+      overflow: hidden;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .logo-top-right img {  
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    header {
+      background-color: #6b4f3b;
+      color: rgb(230, 233, 236);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      font-family: 'Georgia', serif;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #e3d8e1;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #f2e6da;
+      font-size: 18px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .item-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .ingredients {
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      td img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="logo-top-right">
+      <img src="image.html/coffee mania.jpg" alt="Coffee Mania Logo">
+    </div>
+  <header>
+        <h1><i>Coffee Mania</i></h1>
+    
+  </header>
+
+  <main>
+    <h2><i> Menu </i></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Name & Ingredients</th>
+          <th>Price</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src=""  alt="Espresso"></td>
+
+          <td>
+            <div class="item-name">Espresso</div>
+            <div class="ingredients">Rich dark roast coffee, served as a shot</div>
+            <div><img src="image.html/Espresso.webp"></div>
+            
+            
+            
+          </td>
+          <td> <div class="price">350tk</div></td>
+        </tr>
+        <tr>
+          <td><img src="" alt="Croissant"></td>
+
+          <td>
+            <div class="item-name">Butter Croissant</div>
+            <div class="ingredients">Flaky pastry, butter, baked to golden perfection</div>
+             <div><img src="image.html/Butter Croissant.jpg"></div>
+          </td>
+           <td> <div class="price">400tk</div></td>
+        </tr>
+        <tr>
+          <td><img src="" alt="Latte"></td>
+
+          <td>
+            <div class="item-name">Vanilla Latte</div>
+            <div class="ingredients">Espresso, steamed milk, vanilla syrup</div>
+            <div><img src="image.html/iced_vanilla_latte6.webp"></div>
+          </td>
+           <td> <div class="price">350tk</div></td>
+        </tr>
+        <tr>
+          <td><img src="" alt="Cheesecake"></td>
+
+          <td>
+            <div class="item-name">Strawberry Cheesecake</div>
+            <div class="ingredients">Cream cheese, biscuit base, fresh strawberries</div>
+            <div><img src="image.html/Cheesecake.jpg"></div>
+            
+          </td>
+           <td> <div class="price">450tk</div></td>
+        </tr>
+        <tr>
+          <td><img src=""alt="Icecream"></td>
+ 
+          <td>
+            <div class="item-name">Special Icecream</div>
+            <div class="ingredients"> Vanilla, chocolate, Strawberry</div>
+             <div><img src="image.html/ice_cream.jpg"></div>
+          </td>
+           <td> <div class="price">300tk</div></td>
+        </tr>
+        <tr>
+          <td><img src="" alt="Drinks"></td>
+
+          <td>
+            <div class="item-name">Soft Drinks</div>
+            <div class="ingredients">Mojo,Fanta,Sprite,Lemon drink</div>
+             <div><img src="image.html/soft_drinks.jpg"></div>
+          </td>
+           <td> <div class="price">200tk</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
