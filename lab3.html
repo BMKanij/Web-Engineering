@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop With Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<style>
+    * {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1,
+h3,
+a,
+sub {
+    color: white;
+    font-weight: 300;
+}
+
+h1 {
+    margin-right: 20px;
+}
+
+
+.items-dropdown,
+.offer-dropdown {
+    position: relative;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.dropdown-menu1,
+.dropdown-menu2 {
+    width: 140px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style-type: none;
+    padding: 8px 0;
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.items-dropdown:hover .dropdown-menu1,
+.offer-dropdown:hover .dropdown-menu2 {
+    display: block;
+}
+
+.dropdown-menu1 li a,
+.dropdown-menu2 li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu1 li a:hover,
+.dropdown-menu2 li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+#searchButton {
+    color: black;
+    background-color: yellow;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#cartIcon {
+    color: white;
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#cartIcon sub {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    font-size: 0.7rem;
+    color: white;
+    background: red;
+    border-radius: 50%;
+    padding: 1px 5px;
+}
+
+
+#section1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 10px 0 5px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.productCard {
+    background-color: white;
+    width: 22%;
+    box-shadow: 0px 4px 4px rgb(226, 222, 222);
+    padding: 10px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.productCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.productCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.productCard:hover img {
+    transform: scale(1.1);
+}
+
+
+.productCard h3,
+.productCard h4 {
+    color: black;
+}
+
+
+.footer {
+    background-color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerText {
+    color: white;
+    text-align: center;
+}
+
+.backgroundImage {
+    height: 100vh;
+    background-image: url('https://thumbs.dreamstime.com/b/special-offer-37086976.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.oferButton {
+    background-color: green;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.oferButton:hover {
+    background-color: darkgreen;
+}
+
+@media (max-width: 1024px) {
+    .productCard {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 10px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .items-dropdown,
+    .offer-dropdown {
+        margin: 0;
+    }
+
+    #section1 {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 0 0;
+    }
+
+    .productCard {
+        width: 90%;
+    }
+
+    .backgroundImage {
+        height: 50vh;
+    }
+}
+</style>
+<body>
+    <nav>
+        <h1>Shop With Me</h1>
+        <body style="background-color:whitesmoke;">
+
+        <a href="">Account</a>
+
+        <div class="items-dropdown">
+            <h3>Items</h3>
+            <ul class="dropdown-menu1">
+                <li><a href="#">Yamaha</a></li>
+                <li><a href="#">Honda</a></li>
+                <li><a href="#">Suzuki</a></li>
+                 <li><a href="#">Hero-xtreme</a></li>
+                  <li><a href="#">Royal Enfield</a></li>
+            </ul>
+        </div>
+
+        <div class="offer-dropdown">
+            <h3>Offer</h3>
+            <ul class="dropdown-menu2">
+                <li><a href="#">Eid salami</a></li>
+                <li><a href="#">down-payment</a></li>
+                <li><a href="#">Other-Offers</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <input type="text" placeholder="Type your item" />
+            <button id="searchButton">Search</button>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-cart-shopping" id="cartIcon"><sub>0</sub></i>
+        </div>
+    </nav>
+
+    <section class="backgroundImage">
+        
+        <button class="oferButton">
+            <h3>Button</h3>
+        </button>
+    </section>
+
+    <section id="section1">
+        <div class="productCard">
+            <img src="yamaha.webp" />
+             <h3>Yamaha</h3>
+            <h3>Brand:Yamaha</h3>
+            <h4>$4996.65</h4>
+        </div>
+        <div class="productCard">
+            <img src="honda.webp"/>
+            <h3>Honda</h3>
+            <h3>Brand:Honda</h3>
+            <h4>$3996.65</h4>
+        </div>
+        </div>
+        <div class="productCard">
+            <img src="suzuki.jpg" />
+           <h3>Suzuki</h3>
+            <h3>Brand:Suzuki</h3>
+            <h4>$3996.65</h4>
+        </div>
+        <div class="productCard">
+            <img src="download.jpg" />
+           <h3>Hero-xtreme</h3>
+            <h3>Brand:Hero</h3>
+            <h4>$3996.65</h4>
+        </div>
+        <div class="productCard">
+            <img src="apache.jpg" />
+            <h3>TVS apache</h3>
+            <h3>Brand:TVS</h3>
+            <h4>$3996.65</h4>
+        </div>
+        <div class="productCard">
+            <img src="hero xblade.jpg" />
+           <h3>Hero xblade</h3>
+            <h3>Brand:Hero</h3>
+            <h4>$3996.65</h4>
+        </div>
+        <div class="productCard">
+            <img src="royel.jpg" />
+           <h3>Royal Enfield</h3>
+            <h3>Brand:Royal Enfield</h3>
+            <h4>$3996.65</h4>
+        </div>
+        <div class="productCard">
+            <img src="royel himalayan.jpg" />
+            <h3>Royal Enfield  Himalayan</h3>
+            <h3>Brand:Royal Enfield</h3>
+            <h4>$3996.65</h4>
+
+        
+    </section>
+
+    <section style="height: 100px;"></section>
+
+    <footer class="footer">
+        <div>
+            <p class="footerText">
+                <a href="https://github.com/fahimalaminauntu" target="_blank" class="github-link"
+                    aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i> fahimalaminauntu
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
