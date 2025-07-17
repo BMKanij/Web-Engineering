@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop With Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f8f8;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 15px 30px;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      font-size: 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .nav-links span,
+    .nav-links .dropdown {
+      position: relative;
+      padding: 6px 10px;
+      cursor: pointer;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .nav-links span:hover,
+    .nav-links .dropdown:hover {
+      color: #ff6347;
+      border-bottom: 2px solid #ff6347;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: black;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+      transform: translateX(5px);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .search-box input[type="text"] {
+      padding: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .search-box button {
+      padding: 8px 12px;
+      background-color: #ff6347;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .search-box button i {
+      font-size: 16px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 50px 10px 0 5px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .productCard {
+      background-color: white;
+      width: 22%;
+      box-shadow: 0px 4px 4px rgb(226, 222, 222);
+      padding: 10px;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .productCard:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .productCard img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .productCard:hover img {
+      transform: scale(1.1);
+    }
+
+    .productCard h3,
+    .productCard h4 {
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background-color: #222;
+      color: white;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Shop With Me</h1>
+    <div class="nav-links">
+      <span><i class="fa-solid fa-user"></i> Account</span>
+
+      <div class="dropdown">
+        <span><i class="fa-solid fa-box"></i> Items</span>
+        <div class="dropdown-content">
+          <a href="#">Yamaha</a>
+          <a href="#">Honda</a>
+          <a href="#">Suzuki</a>
+          <a href="#">Kawasaki</a>
+        </div>
+        
+        
+      </div>
+
+      <span><i class="fa-solid fa-tags"></i> Offers</span>
+      <div class="dropdown">
+        <span><i class="fa-solid fa-box"></i> Offers>
+        <div class="dropdown-content">
+          <a href="#">Ed Offers</a>
+          <a href="#">down-payment</a>
+          <a href="#">10%off</a>
+          
+        </div>
+
+      
+
+      <div class="search-box">
+        <input type="text" placeholder="Search for items..." />
+        <button><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="products">
+    <div class="productCard">
+      <img src="yamaha.jpg" alt="Yamaha R15 V3">
+      <h3>Yamaha R15 V3</h3>
+      <p>Brand: Yamaha</p>
+      <h4>$3,200</h4>
+    </div>
+
+    <div class="productCard">
+      <img src="honda.jpg" alt="Honda CB150R">
+      <h3>Honda CB150R</h3>
+      <p>Brand: Honda</p>
+      <h4>$3,100</h4>
+    </div>
+
+    <div class="productCard">
+      <img src="Suzuki.jpg" alt="Suzuki Gixxer">
+      <h3>Suzuki Gixxer 150</h3>
+      <p>Brand: Suzuki</p>
+      <h4>$2,950</h4>
+    </div>
+
+    <div class="productCard">
+      <img src="kawasaki.jpg" alt="Kawasaki Ninja 300">
+      <h3>Kawasaki Ninja 300</h3>
+      <p>Brand: Kawasaki</p>
+      <h4>$4,500</h4>
+    </div>
+
+    <div class="productCard">
+      <img src="xtreme.jpg" alt="Hero xtreme 200">
+      <h3>Hero Xtreme 200</h3>
+      <p>Brand: Hero</p>
+      <h4>$3,500</h4>
+    </div>
+  </div>
+
+  <footer>
+    <p>BM Kanij</p>
+    <p><a href="mailto:bmkanij26867@gmail.com">bmkanij26867@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
 
