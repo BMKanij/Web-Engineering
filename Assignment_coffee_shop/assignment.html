@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coffee Shop</title>
+  <style>
+    
+    .review-section input:hover,
+    .review-section textarea:hover,
+    .review-section select:hover,
+    .review-section label:hover,
+    .review-section button:hover {
+      background-color: #f5f5dc;
+      color: #5c3a1e;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .review-section {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #fffaf0;
+      border: 2px solid #deb887;
+      border-radius: 10px;
+      width: 60%;
+    }
+
+    .review-section h2 {
+      background-color: #8b4513;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .review-section label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .review-section input,
+    .review-section select,
+    .review-section textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .review-section button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #a0522d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body style="background-color:blanchedalmond;">
+
+  <div>
+    <img src="logo.jpeg" alt="Coffee Mania Logo" width="100" height="100">
+  </div>
+
+  <header>
+    <div>
+      <h1> 
+        <h1 style="background-color: rgb(123, 68, 23); color: rgb(225, 211, 211);"><i>Coffee Mania</i></h1>
+      </h1>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <h2>
+        <p style="background-color: azure;" color="black;"><i>Food Menu</i>
+      </h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Items</th>
+            <th>Name & Ingredients</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="image.html/Espresso.webp" alt="Espresso" width="100" height="100"></td>
+            <td><strong>Espresso</strong><br>Rich dark roast coffee, served as a shot</td>
+            <td>350tk</td>
+          </tr>
+          <tr>
+            <td><img src="image.html/Butter Croissant.jpg" alt="Croissant" width="100" height="100"></td>
+            <td><strong>Butter Croissant</strong><br>Flaky pastry, butter, baked to golden perfection</td>
+            <td>400tk</td>
+          </tr>
+          <tr>
+            <td><img src="image.html/iced_vanilla_latte6.webp" alt="Latte" width="100" height="100"></td>
+            <td><strong>Vanilla Latte</strong><br>Espresso, steamed milk, vanilla syrup</td>
+            <td>350tk</td>
+          </tr>
+          <tr>
+            <td><img src="image.html/Cheesecake.jpg" alt="Cheesecake" width="100" height="100"></td>
+            <td><strong>Strawberry Cheesecake</strong><br>Cream cheese, biscuit base, fresh strawberries</td>
+            <td>450tk</td>
+          </tr>
+          <tr>
+            <td><img src="image.html/ice_cream.jpg" alt="Icecream" width="100" height="100"></td>
+            <td><strong>Special Icecream</strong><br>Vanilla, chocolate, Strawberry</td>
+            <td>300tk</td>
+          </tr>
+          <tr>
+            <td><img src="image.html/soft_drinks.jpg" alt="Drinks" width="100" height="100"></td>
+            <td><strong>Soft Drinks</strong><br>Mojo, Fanta, Sprite, Lemon drink</td>
+            <td>200tk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    
+    <div class="review-section">
+      <h2>Customer Review</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="review">Review Description:</label>
+        <textarea id="review" name="review" rows="4" placeholder="Write your review here..." required></textarea>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+
+  </main>
+
+</body>
+</html>
 
