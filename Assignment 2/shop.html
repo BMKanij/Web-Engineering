@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop With Me</title>
+  <link rel="stylesheet" href="shop.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Shop With Me</h1>
+  </header>
+
+  <!-- Special Offer (full-width background image) -->
+  <section class="special-offer" aria-label="Special Offer">
+    <div class="special-offer-content">
+      <h2>🔥 Special Offer! 🔥</h2>
+      <p>Get <strong>15% OFF</strong> on Yamaha R15 V3 — Limited Time Only!</p>
+      <a href="#" class="cta-btn">Grab Offer</a>
+    </div>
+  </section>
+
+  <!-- Navbar (compact) -->
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="nav-left">
+      <span class="nav-item"><i class="fa-solid fa-user"></i> Account</span>
+      <div class="dropdown nav-item">
+        <span><i class="fa-solid fa-box"></i> Items</span>
+        <div class="dropdown-content">
+          <a href="#">Yamaha</a>
+          <a href="#">Honda</a>
+          <a href="#">Suzuki</a>
+          <a href="#">Kawasaki</a>
+        </div>
+      </div>
+      <div class="dropdown nav-item">
+        <span><i class="fa-solid fa-tags"></i> Offers</span>
+        <div class="dropdown-content">
+          <a href="#">Eid Offers</a>
+          <a href="#">Down-payment</a>
+          <a href="#">10% Off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search for items..." aria-label="Search items" />
+        <button id="searchButton" aria-label="Search"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product grid -->
+  <main class="products" id="products" aria-live="polite">
+    <article class="productCard">
+      <img src="yamaha.jpeg" alt="Yamaha R15 V3" />
+      <h3>Yamaha R15 V3</h3>
+      <p class="brand">Brand: Yamaha</p>
+      <p class="price">$3,200</p>
+    </article>
+
+    <article class="productCard">
+      <img src="honda.jpg" alt="Honda CB150R" />
+      <h3>Honda CB150R</h3>
+      <p class="brand">Brand: Honda</p>
+      <p class="price">$3,100</p>
+    </article>
+
+    <article class="productCard">
+      <img src="suzuki.jpg" alt="Suzuki Gixxer 150" />
+      <h3>Suzuki Gixxer 150</h3>
+      <p class="brand">Brand: Suzuki</p>
+      <p class="price">$2,950</p>
+    </article>
+
+    <article class="productCard">
+      <img src="kawasaki.jpg" alt="Kawasaki Ninja 300" />
+      <h3>Kawasaki Ninja 300</h3>
+      <p class="brand">Brand: Kawasaki</p>
+      <p class="price">$4,500</p>
+    </article>
+
+    <article class="productCard">
+      <img src="xtreme.jpg" alt="Hero Xtreme 200" />
+      <h3>Hero Xtreme 200</h3>
+      <p class="brand">Brand: Hero</p>
+      <p class="price">$3,500</p>
+    </article>
+  </main>
+
+  <!-- Customer Review Section -->
+  <section class="review-section" aria-label="Customer reviews">
+    <h2>Customer Reviews</h2>
+
+    <form id="reviewForm" class="review-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+
+      <div class="form-row">
+        <select name="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <div class="rating">
+          <label>Rating:</label>
+          <select name="rating" required>
+            <option value="">Choose</option>
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+          </select>
+        </div>
+      </div>
+
+      <textarea name="review" placeholder="Write your review..." required></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="submit-btn">Submit Review</button>
+        <button type="button" id="clearReviews" class="clear-btn">Clear Reviews</button>
+      </div>
+    </form>
+
+    <div id="reviewsDisplay" class="reviews-display" aria-live="polite"></div>
+  </section>
+
+  <footer class="site-footer">
+    <p>BM Kanij — <a href="mailto:bmkanij26867@gmail.com">bmkanij26867@gmail.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
